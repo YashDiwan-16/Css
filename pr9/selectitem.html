@@ -1,0 +1,39 @@
+<html>
+<head></head>
+<body >
+SELECT YOUR FAVOURITE ACCESSORIES
+<form name="form1" action="" method="">
+<input type="checkbox" name="a" value="MOBILE">MOBILE<br>
+<input type="checkbox" name="b" value="TAB">TAB<br>
+<input type="checkbox" name="c" value="LAPTOP">LAPTOP<br>
+<input type="checkbox" name="d" value="IPAD">IPAD<br>
+<input type="button" name="Print Selected items" value="Print Selected Items" onclick="selection(this.value)">
+</form>
+<script>
+function selection()
+{
+ var x="YOU SELECTED:<br>"
+ with(document.forms.form1)
+{
+ if(a.checked==true)
+ {
+  x+=a.value+" ";
+ }
+ if(b.checked==true)
+ {
+  x+=b.value+" ";
+ }
+ if(c.checked==true)
+ {
+  x+=c.value+" ";
+ }
+ if(d.checked==true)
+ {
+  x+=d.value+" ";
+ }
+}
+document.write(x);
+}
+</script> 
+</body>
+</html>

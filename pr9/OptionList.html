@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Option List Dynamically</title>
+</head>
+<body>
+    <form name="form1" action="" method="">
+<select name="OptionList">
+    <option value="1">Classic</option>
+    <option value="1">Cruiser</option>
+    <option value="1">New Model</option>
+    <option value="1">Royle</option>
+</select>
+<input type="radio" name="vehicle" checked="true" value=1 onclick="ResetOptionList(this.value)">Motorcycle
+<input type="radio" name="vehicle"  value=2 onclick="ResetOptionList(this.value)">car    
+
+</form>
+<script>
+     function ResetOptionList(e)
+     {
+        with(document.forms.form1)
+     
+    {
+  if (e==1)
+{
+ 
+    OptionList[0].text="Classic"
+    OptionList[0].value=1
+    OptionList[1].text="Cruiser"
+    OptionList[1].value=2                   
+    OptionList[2].text="New Model"
+    OptionList[2].value=3
+    OptionList[3].text="Royle"
+    OptionList[3].value=4
+}
+if(e==2)
+{
+    OptionList[0].text="ford"
+    OptionList[0].value=1
+    OptionList[1].text="Toyota"
+    OptionList[1].value=2
+    OptionList[2].text="Suzuki"
+    OptionList[2].value= 3
+    OptionList[3].text="Yamaha"
+    OptionList[3].value=4
+}
+}
+}
+
+</script>
+</body>
+</html>

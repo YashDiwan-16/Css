@@ -1,0 +1,15 @@
+<html>
+ <body>
+ <script type = "text/javascript">
+
+ var age = 15;
+
+ if( age > 18 ) {
+ document.write("<b> Eligible For Voting</b>");
+ } else {
+ document.write("<b> Not
+ Eligible For Voting</b>");
+ }
+
+ </script>
+ </body>

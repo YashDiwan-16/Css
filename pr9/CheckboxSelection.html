@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Checkbox Selection</title>
+</head>
+<body>
+    <form name="form1" action="" method="">
+       <p> Select your favourite Fruits:<br>
+         <input type="checkbox" name="a" value=Apple onclick="Selection()">Apple
+         <input type="checkbox" name="p" value=Pinepple>PineApple
+         <input type="checkbox" name="o" value=Apple>Orange
+         <input type="checkbox" name="b" value=Banana>Banana
+         <input type="checkbox" name="m" value=Mango>Mango
+<button onclick="Selection()">show</button>
+    </form>
+
+<script >
+    function Selection()
+    {
+        var x="You Selected:";
+        with (document.forms.form1)
+        {
+ if(a.checked==true)
+ {
+    x+=a.value+"";
+ }
+ if(b.checked==true)
+ {
+    x+=b.value+"";
+ }
+ if(o.checked==true)
+ {
+    x+=o.value+"";
+ }
+ if(m.checked==true)
+ {
+    x+=m.value+"";
+ }
+ if(p.checked==true)
+ {
+    x+=p.value+"";
+ }
+ alert(x);
+
+ }}
+</script>
+</body>
+</html>

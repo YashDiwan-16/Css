@@ -1,0 +1,39 @@
+<html>
+<head></head>
+<body>
+<script>
+function createCookie()
+{
+if(document.myform.customer.value=="")
+{
+alert("ENTER SOME VALUE:");
+return; 
+}
+cookievalue=escape(document.myform.customer.value) +";";
+document.cookie="name" +cookievalue;
+document.write("SET  COOKIES:"+"name=" +cookievalue);
+}
+</script>
+<form name="myform">
+Enter Name:<input type="text" name="customer">
+<input type="button" value="SET THIS COOKIE" onclick="createCookie()">
+</form>
+<script>
+function readCookie()
+{
+ var allcookies=document.cookie;
+ document.write("All Cookies:"+allcookies);
+ cookiearray=allcookies.spilt('=');
+ for(var i=0; i<cookiearray.length;i++)
+ {
+ name=cookiearray[i].spilt('=')[0];
+ value=cookiearray[i].spilt('=')[1];
+ document.write("key is:" +name +"and value is:0");
+ }
+}
+</script>
+<form name="myform1">
+<input type="button" value="GET COOKIE" onclick="readCookie()">
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Browser Window</title>
+	<script type="text/javascript">
+		function openWindow() 
+{
+
+ var win=window.open("https:\\www.google.co.in/","My Window"," left=0,top=5,width=200,height=100");
+ win.document.write("<h1>This is my window</h1>");
+this.focus();
+}
+
+ function closeWindow()
+ {
+    window.close();
+ }
+	</script>
+</head>
+<body>
+<p>Window with focus</p>
+<input type="button" name="openWindow"  value="open" onclick="openWindow()">
+<input type="button" name="closeWindow " value="close" onclick="closeWindow">
+</body>
+</html>

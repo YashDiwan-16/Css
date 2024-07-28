@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<script type="text/javascript">
+		function add()
+		{
+			var a,b,c;
+			a=Number(document.cal.num1.value);
+		 	b=Number(document.cal.num2.value);
+		 	c=a+b;
+		 	document.cal.total.value=c;
+		}
+		function sub()
+		{
+			var a,b,c;
+			a=Number(document.cal.num1.value);
+		 	b=Number(document.cal.num2.value);
+		 	c=a-b;
+		 	document.cal.total.value=c;
+		}
+		function mul()
+		{
+			var a,b,c;
+			a=Number(document.cal.num1.value);
+		 	b=Number(document.cal.num2.value);
+		 	c=a*b;
+		 	document.cal.total.value=c;
+		}
+		function div()
+		{
+			var a,b,c;
+			a=Number(document.cal.num1.value);
+		 	b=Number(document.cal.num2.value);
+		 	c=a/b;
+		 	document.cal.total.value=c;
+		}
+      function add1()
+      {
+       
+       var a,b,c1;
+			a=Number(document.cal.dif1.value);
+		 	b=Number(document.cal.dif2.value);
+		 	if (a>b) 
+		 	{
+         
+            document.cal.log.value=a;
+            
+             }
+             else
+             {
+             	var b=Number(document.cal.dif2.value);
+             	document.cal.log.value=b;
+             }
+         }
+          function add2()
+      {
+       
+       var a,b,c1;
+			a=Number(document.cal.and1.value);
+		 	b=Number(document.cal.and2.value);
+		 	if ((a>b)&&(a==b))
+		 	{
+                var a2="true";
+                document.cal.and.value=a2;
+        
+             }
+             else
+             {
+             	var b2="false";
+             	document.cal.and.value=b2;
+             }
+         }
+
+            function add4()
+      {
+       
+       var a,b,c1;
+			a=Number(document.cal.and1.value);
+		 	b=Number(document.cal.and2.value);
+		 	if ((a>b)||(a==b))
+		 	{
+                var a2="true";
+                document.cal.and.value=a2;
+        
+             }
+             else
+             {
+             	var b2="false";
+             	document.cal.and.value=b2;
+             }
+         }
+         function age()
+         {
+         	var a,c;
+         	a=Number(document.cal.age2.value);
+         	c=((a>18)?"eligible":"not eligible");
+         	document.cal.age1.value=c;
+         }
+
+
+	</script>
+</head>
+<body>
+	<form name="cal">
+		Number1=<input type="text" name="num1"><br>
+		Number2=<input type="text" name="num2"><br>
+		Result=<input type="text" name="total"><br><br>
+       <input type="button" value="add" onclick="add()">
+       <input type="button" value="sub" onclick="sub()">
+       <input type="button" value="mul" onclick="mul()">
+       <input type="button" value="div" onclick="div()">
+       <br><br><hr>
+        Number1=<input type="text" name="dif1">
+		Number2=<input type="text" name="dif2">
+	 <br><br>
+     if statement <input type="text" name="log" >
+    <input type="button" name="log1" value="greater" onclick="add1()"><br>
+<hr>
+     Number1=<input type="text" name="and1">
+		Number2=<input type="text" name="and2"><br><br>
+    and= ((a>b)&&(a==b)) or = ((a>b)||(a==b))<input type="text" name="and">
+
+    <input type="button" name="log1" value="and" onclick="add2()">
+    <input type="button" name="log1" value="or" onclick="add4()"><br><hr>
+
+    Enter age<input type="text" name="age2">
+    After check <input type="text" name="age1">
+    <input type="button" name="check1" value="Check" onclick="age()"><hr>
+
+</form>
+</body>
+</html>

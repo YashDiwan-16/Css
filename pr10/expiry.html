@@ -1,0 +1,38 @@
+<html>
+<head></head>
+<body>
+<!--<script>
+function WriteCookie()
+{
+if(document.myform.customer.value=="")
+{
+alert("ENTER SOME VALUE:");
+return;
+}
+cookievalue=escape(document.myform.customer.value)+";";
+document.cookie="name=" +cookievalue;
+document.write("SETTING COOKIES:" +"name=" +cookievalue);
+}
+</script>
+<form name="myform">
+ENTER NAME:<input type="text" name="customer">
+<input type="button" value="SET COOKIE" onclick="WriteCookie()">
+</form>-->
+<script>
+function expire()
+{
+var now=new Date();
+now.setMonth(now.getMonth()+1);
+cookievalue=escape(document.myform1.customer.value)+";"
+document.cookie="name=" +cookievalue;
+document.cookie="expires=" +now.toUTCString()+";"
+document.write("Setting Cookies:" +"name=" +cookievalue);
+}
+</script>
+<form name="myform1">
+ENTER NAME:
+<input type="text" name="customer">
+<input type="button" value="SET COOKIES" onclick="expire()">
+</form>
+</body>
+</html>

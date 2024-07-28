@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script >
+        function updatelist(x)
+        {
+            var a= ["Apple","Banana","Mango","Orange"];
+            var b=["bringle","Potato","Onion","Cabbage"];
+             
+            with(document.forms.forms1)
+            {
+              if(x==1)
+              {
+                 for(var i=0;i<a.length;i++)
+                 optionlist[i].text=a[i];
+  
+              }
+              if (x==2)
+              {
+                 for(var i=0;i<b.length;i++)
+                 optionlist[i].text=b[i];
+              }
+            }
+        }
+    </script>
+</head>
+<body>
+<form name ="forms1" action="" method="" >
+<select name="optionlist">
+<option value="1"></option>
+<option value="2"></option>
+<option value="3"></option>
+<option value="4"></option>
+</select>
+<input  type="radio" name="objects" value="1" onclick="updatelist(this.value)">fruits
+
+    
+<input  type="radio" name="objects" value="2" onclick="updatelist(this.value)">vegatables
+</form>
+</body>
+</html>

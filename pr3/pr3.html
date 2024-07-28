@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript</title>
+</head>
+<body>
+    <h1 style="font-family:verdana;" align="center">
+    Devlop a Javascript To Implement Different array Functions</h1>
+    <hr ="3">
+    <script>
+document.write("<h2>1:Accessing Array Elements Using For Loop</h2>");
+    document.write("<br> <h3>OUTPUT:-</h3>");
+    var a;
+var arr1=[10,20,30,40,50,60,70,80,90,100];
+for(a=0;a<10;a++)
+document.write(arr1[a]+"<br>");
+document.write("<hr>");
+document.write("<h2>2:-- CHANGING ARRAY ELEMENTS</h2>");
+
+document.write("<b>OUTPUT:-</b><br>");
+document.write("<br>");
+var arr2=["Pruthviraj ","Rohan ","Sandesh "," Vinayak"];
+arr2[1]=("Adityabodhi ");
+document.write(arr2);
+document.write("<br>");
+document.write("<br>");
+document.write("<hr>");
+document.write("<h2>3:- BASIC OPERATIONS OF ARRAY ADDING AN ELEMENT TO THE END OF THE ARRAY</h2>");
+
+document.write("<b>--OUTPUT</b>");
+document.write("<br>");
+document.write("<br>");
+var arr3=["Adityabodhi "," Mahendra "];
+arr3.push("Gaikwad");
+document.write(arr3);
+document.write("<br>");
+document.write("<hr>");
+document.write("<h2>4:-- BASIC OPERATIONS OF ARRAY:-- ADDING AN ELEMENT TO BEGINNING OF THE ARRAY</h2>");
+
+document.write("<b>--OUTPUT</b>");
+document.write("<br>");
+document.write("<br>");
+var arr4=[ 215 , "        BRANCH:--IF5I"];
+arr4.unshift("Hall NO:--");
+document.write(arr4);
+document.write("<hr>");
+document.write("<h2>5:-- BASIC OPERATIONS OF ARRAY:-- DELETING LAST ELEMENT OF THE ARRAY</h2>");
+document.write("<b>OUTPUT</b>");
+document.write("<br>");
+document.write(" ARRAY BEFORE DELETING ELEMENT:--   ");
+document.write("<br>");
+document.write("<br>");
+document.write(arr3);
+document.write("<br>");
+document.write("<br>");
+document.write("AFTER DELETING ARRAY ELEMENT:--   ");
+document.write("<br>");
+document.write("<br>");
+arr3.pop();
+document.write(arr3);
+document.write("<hr>");
+document.write("<h2>6:-- BASIC OPERATIONS OF ARRAY:-- DELETING FIRST ELEMENT OF THE ARRAY</h2>");
+document.write("<b>--OUTPUT</b>");
+document.write("<br>")
+document.write("<br>");
+document.write("BEFORE DELETING ARRAY ELEMENT:--   ");
+document.write("<br>");
+document.write("<br>");
+document.write(arr2);
+document.write("<br>");
+document.write("<br>");
+document.write("AFTER DELETING ARRAY ELEMENT:--   ");
+document.write("<br>");
+arr2.shift();
+document.write(arr2);
+document.write("<hr>");
+document.write("<h2>7:-BASIC OPERATIONS OF ARRAY SORTING OF THE ARRAY</h2>");
+document.write("<b>OUTPUT:-</b>");
+document.write("<br>");
+var arr5=["  Murum ", "Latur   ","Umerga ","Udgir  "];
+document.write("<br>");
+document.write("ARRAY BEFORE SORTING:- ");
+document.write("<br>");
+document.write("<br>");
+document.write(arr5);
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+var resarr5=arr5.sort();
+document.write("ARRAY AFTER SORTING: ");
+document.write("<br>");
+document.write("<br>");
+document.write(resarr5);
+document.write("<br>");
+document.write("<hr>");
+document.write("<h2>8:-- BASIC OPERATIONS OF ARRAY:-- SORTING OF THE ARRAY(USING COMPARE FUNCTION)</h2>");
+
+document.write("<b>--OUTPUT</b>");
+document.write("<br>");
+
+var arr6=[11,586,78,980,66,84,889];
+document.write("<br>");
+document.write("ARRAY BEFORE SORTING:-- ");
+document.write("<br>");
+
+document.write("<br>");
+
+document.write(arr6);
+document.write("<br>");
+document.write("<br>");
+arr6.sort(function(a,b)
+    {
+     return a-b
+    }
+	     );
+document.write("ARRAY AFTER SORTING:-- ");
+document.write("<br>");
+
+document.write("<br>");
+
+document.write(arr6);
+document.write("<br>");
+document.write("<hr>");
+document.write("<h2>9: BASIC OPERATIONS OF ARRAY BY MAXIMISING NUMBER,MINIMUMING  NUMBER VALUE AND REVERSING OF THE ARRAY</h2>");
+document.write("<b>--OUTPUT</b>");
+document.write("<br>");
+document.write("<br>");
+var arr7=[78,85,16,22,18];
+document.write("<br>");
+document.write("ARRAY BEFORE SORTING");
+document.write("<br>");
+document.write(arr7);
+document.write("<br>");
+arr7.sort();
+document.write("ARRAY AFTER SORTING: ");
+document.write("<br>");
+document.write("<br>");
+document.write(arr7);
+document.write("<h3>MINIMUM NUMBER OF THE ABOVE ARRAY  ");
+document.write(arr7[0]);
+document.write("<br>");
+document.write("<br>");
+document.write("<h3>MAXIMUM NUMBER OF THE ABOVE ARRAY ");
+document.write(arr7[4]);
+document.write("<br>");
+
+document.write("<br>");
+document.write("<h3>REVERSING ORDER OF THE ABOVE ARRAY ");
+document.write(arr7.reverse());
+document.write("<br>");
+document.write("<br>");
+document.write("<hr>");
+document.write("<h2>10:BASIC OPERATIONS OF ARRAY BY COMBINING OF THE ARRAYS</h2>");
+document.write("<b>--OUTPUT</b>");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("AFTER COMBINING ARRAY");
+
+document.write("<br>");
+var res=arr5.concat(arr6);
+document.write(res)
+document.write("<br>");
+document.write("<br>");
+document.write("<hr>");
+document.write("<h2>11: BASIC OPERATIONS OF ARRAY BY  MODIFYING OF THE ELEMENTS IN THE ARRAYS</h2>");
+document.write("<hr>");
+document.write("<b>--OUTPUT</b>");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("BEFORE USING SPLICE METHOD:---"+"<br>");
+var arr8=["PLGPL","GRWPL","COEP","PICT"];
+document.write(arr8 +"<br>");
+var resarr8=arr8.splice(3,1,"GPS");
+document.write("AFTER USING SPLICE METHOD:---"+"<br>");
+document.write(arr8);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

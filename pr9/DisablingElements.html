@@ -1,0 +1,21 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function disable()
+{
+document.forms.form1.t1.disabled=true;
+}
+function enable()
+{
+document.forms.form1.t1.disabled=false;
+}
+</script>
+<form name="form1">
+ENTER YOUR NAME:<input type="text" name="t1">
+<input type="button" name="b1" value="Disable" onclick="disable()">
+<input type="button" name="b2" value="Enable" onclick="enable()">
+</form>
+</body>
+</html>

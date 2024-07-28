@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body><div style="width:300px;float: left;">
+	<form name="f1" action="" method="">
+		
+		<input type="radio" name="vech" checked="true" value="1"onclick="ropt(this.value)"> Motercycle
+		<input type="radio" name="vech"  value="2"onclick="ropt(this.value)"> Car<br>
+		<select name="optlist">
+			<option value="1">classic</option>
+			<option value="2">crusier</option>
+			<option value="3">new model</option>
+
+		</select>
+	</form>
+	<hr></div>
+	<script type="text/javascript">
+		function ropt(e) {
+			with(document.forms.f1){
+			if(e==1)
+		
+		{
+			optlist[0].text="classic";
+			optlist[0].value=1;
+			optlist[1].text="bullet";
+			optlist[1].value=2;
+			optlist[2].text="ducati";
+			optlist[2].value=3;
+		}
+		if(e==2)
+		{
+			optlist[0].text="ford";
+			optlist[0].value=1;
+			optlist[1].text="esport";
+			optlist[1].value=2;
+			optlist[2].text="bugati";
+			optlist[2].value=3;
+		}}}
+	</script>
+	<script type="text/javascript">
+		function updatelist(e) {
+			var a=["apple","banana","chikoo","grapes"];
+			var b=["potato","lady finger","cabbage","tomato"];
+
+			with(document.forms.f2)
+			{
+			if(e==1)
+		{
+			for (var i = 0;i<a.length ;  i++) {
+			optlist2[i].text=a[i];
+		}
+			
+		}
+		if(e==2)
+		{
+			for (var i = 0;i<b.length ;  i++) {
+			optlist2[i].text=b[i];
+		}}}}
+	</script><div >
+	<form name="f2" action="" method="">
+		
+		<input type="radio" name="vech" checked="true" value="1"onclick="updatelist(this.value)">Fruits
+		<input type="radio" name="vech"  value="2"onclick="updatelist(this.value)">Vegitables<br>
+		<select name="optlist2">
+			<option value="1">apple</option>
+			<option value="2">banana</option>
+			<option value="3">chikoo</option>
+			<option value="4">grapes</option>
+
+
+		</select>
+	</form><hr></div><div  style="width:300px;float: left;">
+	<form name="f3" action="" method="">
+		select your favourite fruites<br>
+		<input type="checkbox" name="a"value="apple">apple <br>
+		<input type="checkbox" name="b"value="banana"> banana<br>
+		<input type="checkbox" name="c"value="chikoo">chikoo <br>
+		<input type="checkbox" name="g"value="grapes">grapes <br>
+		<button onclick="sel()">Show</button>
+
+		
+	</form><hr></div>
+	<script type="text/javascript">
+		function sel(){
+			var x="you selected";
+			with(document.forms.f3)
+			{
+				if(a.checked == true){
+					x+=a.value+" ";
+				}if(b.checked == true){
+					x+=b.value+" ";
+				}if(c.checked == true){
+					x+=c.value+"  ";
+				}if(g.checked == true){
+					x+=g.value+" ";
+				}
+			}
+		alert(x);
+		}
+		
+	</script>
+<div>
+	<form name="f4" action="" method="">
+		select your favourite acccessories<br>
+		<input type="checkbox" name="t"value="Tab">Tab<br>
+		<input type="checkbox" name="m"value="Mobile">Mobile<br>
+		<input type="checkbox" name="l"value="Laptop">Laptop<br>
+		<input type="checkbox" name="i"value="Ipad">Ipad<br>
+		<input type="button" onclick="selc()" value="Print Selected Item">
+		<input type="text" name="" id="t1" disabled>
+
+		
+	</form>
+	</div><hr>
+	<script type="text/javascript">
+		function selc(){
+			var x="you selected ";
+			with(document.forms.f4)
+			{ 
+				if(t.checked == true){
+					x+=t.value+" ";
+				}if(m.checked == true){
+				x+=m.value+" ";
+				}if(l.checked == true){
+					 x+=l.value+" ";
+				}if(i.checked == true){
+					x+=i.value+" ";
+				}
+				document.getElementById('t1').value=x;
+
+			}}
+		
+	
+		</script><br>
+	<div style="width:300px;height: 100px; float: left;">
+		Enter name: <input type="text" id="mt" name=""><br><br>
+		<button id="a0">My Button</button><br><br>
+		<button onclick="a1()">Disable</button>
+		<button onclick="a2()">Enable</button>
+		<hr>
+	</div>
+	<script type="text/javascript">
+		function a1() {
+		
+			document.getElementById('a0').disabled=true;
+			document.getElementById('mt').disabled=true;
+
+		}
+		function a2() {
+		
+			document.getElementById('a0').disabled=false;
+			document.getElementById('mt').disabled=false;
+
+		}
+	</script>
+	<div>
+	Enter text:<input type="text" name="" id="emp" value="">
+	<p>
+		<input type="button" id="bt" name="" value="change" onclick="cg()">
+	</p><br><br>
+</div><hr>
+<form name="f6" action="" method="">
+	Enter first name: <input type="text" id="b1" name="fname"><br><br>
+	Enter last name: <input type="text" id="b2" name="lname" onblur="k()"><br><br>
+	Email:<input type="email" name="" id="b3">
+	<button onclick="javascript:document.forms.f6.submit()" >Submit</button><br><br>
+	<input type="reset" onclick="r()" name="">
+
+
+</form><hr>
+<script type="text/javascript">
+	function s() { 
+		document.getElementById('b2').disabled=true;
+	document.getElementById('b1').disabled=true;
+	document.getElementById('b3').disabled=true;
+
+
+	}
+	function k(){
+
+		
+	var y=	document.getElementById('b1').value;
+	var z=	document.getElementById('b2').value;
+    var x="@msbte.com";
+    var w=".";
+    	document.getElementById('b3').value=y+w+z+x;
+	}
+</script>
+
+<script type="text/javascript">
+	function cg() {
+		var i= document.getElementById('bt');
+		var x= document.getElementById('emp').value;
+     bt.value=x;
+	}
+</script>
+<form name="f8" action="" method="">
+		Enter first name: <input type="text" id="b1" name="fname"><br><br>
+		<img src="aaa.jpg" height="200" width="200"onclick="javascript:document.forms.f8.submit()" >
+</form>sss
+</body>
+</html>

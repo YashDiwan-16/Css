@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical no 4</title>
+</head>
+<body>
+    <h4 align="center">Practical No 4</h4>
+<h1 style="font-family:verdana;" align="center"> Devlop A Javascript To Implement Functions</h1>
+<hr color="blue">
+<script>
+    
+    document.write("<h2> 1:Demonstrating Use of Scope Variable Using Function</h2>");
+     var a="Adityabodhi";
+
+     function display()
+     {
+        var i= "Welcome To Javascript";
+        document.write("Global value=");
+        document.write(a);
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Local value=");
+
+        document.write(i);
+
+     }
+     display();
+     document.write("<hr>");
+
+     document.write(" <h2>2: Calling A User-Defined Function Using Function</h2>");
+
+        function cube()
+        {
+            var b=5;
+            document.write(" Cube Of 5="+b*b*b);
+        }
+        cube();
+   function AreaRect( a,b)
+        {
+            var a= 28;
+            var b= 55;
+            document.write("Area of Rectangle="+(a*b));
+        }
+        document.write("<br>");
+
+        AreaRect();
+        document.write("<hr>");
+    
+
+    document.write(" <h2> 3:Function Returning A Value</h2>");
+       
+                function sum(b1,b2)
+       {  
+        
+        return b1+b2;
+        
+    }  var r= sum(2,4);
+    
+    document.write(" Addition: "+r);
+    document.write("<br>");
+ document.write("<hr>")
+     document.write(" <h2>4:Function calling another Function</h2>");
+
+      {
+        var v1,v2,v3;
+        v1=10,v2=20;
+        v3=v1+v2;
+        document.write("Addition="+v3);
+        var x= sub(20,10);
+        document.write("<br>")
+        document.write("Subraction="+v3);
+
+      }
+      document.write("<br>")
+      function sub(v1,v2)
+      {
+        return v1-v2;
+      }
+      add()
+      document.write("<hr>");
+     
+          </script>
+ 
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div> <h1>Changing labels Dynamically</h1>
+    <script>
+         function ChangeLabel()
+         {
+             var l= document.getElementById("bt");
+             var x= document.getElementById("emp").value;
+             bt.value=x;
+             
+         }
+    </script>
+</head>
+<body>
+    Enter Text:<input type="text" id="emp" value="">
+    <p><input type="button" id="bt"  value="Change Me" onclick="ChangeLabel()">
+    </p></div>
+    <div>
+        <h1>Checkbox Selection</h1>
+
+    <form name="form1" action="" method="">
+       <p> Select your favourite Fruits:<br>
+         <input type="checkbox" name="a" value=Apple onclick="Selection()">Apple
+         <input type="checkbox" name="p" value=Pinepple>PineApple
+         <input type="checkbox" name="o" value=Apple>Orange
+         <input type="checkbox" name="b" value=Banana>Banana
+         <input type="checkbox" name="m" value=Mango>Mango
+<button onclick="Selection()">show</button>
+    </form>
+
+<script >
+    function Selection()
+    {
+        var x="You Selected:";
+        with (document.forms.form1)
+        {
+ if(a.checked==true)
+ {
+    x+=a.value+"";
+ }
+ if(b.checked==true)
+ {
+    x+=b.value+"";
+ }
+ if(o.checked==true)
+ {
+    x+=o.value+"";
+ }
+ if(m.checked==true)
+ {
+    x+=m.value+"";
+ }
+ if(p.checked==true)
+ {
+    x+=p.value+"";
+ }
+ alert(x);
+
+ }}
+</script>
+    </div>
+    <div>
+        <h1>Disabling Element</h1>
+        <script>
+            function disable()
+            {
+            document.forms.form1.t1.disabled=true;
+            }
+            function enable()
+            {
+            document.forms.form1.t1.disabled=false;
+            }
+            </script>
+            <form name="form1">
+            ENTER YOUR NAME:<input type="text" name="t1">
+            <input type="button" name="b1" value="Disable" onclick="disable()">
+            <input type="button" name="b2" value="Enable" onclick="enable()">
+            </form> 
+    </div>
+    <div>
+        <h1>Changing OptionList Dynamically</h1>
+        <form name="form1" action="" method="">
+            <select name="OptionList">
+                <option value="1">Classic</option>
+                <option value="1">Cruiser</option>
+                <option value="1">New Model</option>
+                <option value="1">Royle</option>
+            </select>
+            <input type="radio" name="vehicle" checked="true" value=1 onclick="ResetOptionList(this.value)">Motorcycle
+            <input type="radio" name="vehicle"  value=2 onclick="ResetOptionList(this.value)">car    
+            
+            </form>
+            <script>
+                 function ResetOptionList(e)
+                 {
+                    with(document.forms.form1)
+                 
+                {
+              if (e==1)
+            {
+             
+                OptionList[0].text="Classic"
+                OptionList[0].value=1
+                OptionList[1].text="Cruiser"
+                OptionList[1].value=2                   
+                OptionList[2].text="New Model"
+                OptionList[2].value=3
+                OptionList[3].text="Royle"
+                OptionList[3].value=4
+            }
+            if(e==2)
+            {
+                OptionList[0].text="ford"
+                OptionList[0].value=1
+                OptionList[1].text="Toyota"
+                OptionList[1].value=2
+                OptionList[2].text="Suzuki"
+                OptionList[2].value= 3
+                OptionList[3].text="Yamaha"
+                OptionList[3].value=4
+            }
+            }
+            }
+            
+            </script>
+    </div>
+    <div>
+        <h1>SELECT YOUR FAVOURITE ACCESSORIES</h1>
+<form name="form1" action="" method="">
+<input type="checkbox" name="a" value="MOBILE">MOBILE<br>
+<input type="checkbox" name="b" value="TAB">TAB<br>
+<input type="checkbox" name="c" value="LAPTOP">LAPTOP<br>
+<input type="checkbox" name="d" value="IPAD">IPAD<br>
+<input type="button" name="Print Selected items" value="Print Selected Items" onclick="selection(this.value)">
+</form>
+<script>
+function selection()
+{
+ var x="YOU SELECTED:<br>"
+ with(document.forms.form1)
+{
+ if(a.checked==true)
+ {
+  x+=a.value+" ";
+ }
+ if(b.checked==true)
+ {
+  x+=b.value+" ";
+ }
+ if(c.checked==true)
+ {
+  x+=c.value+" ";
+ }
+ if(d.checked==true)
+ {
+  x+=d.value+" ";
+ }
+}
+document.write(x);
+}
+</script> 
+    </div>
+    <div>
+        <h1>Updatelist</h1>
+        <script >
+            function updatelist(x)
+            {
+                var a= ["Apple","Banana","Mango","Orange"];
+                var b=["bringle","Potato","Onion","Cabbage"];
+                 
+                with(document.forms.forms1)
+                {
+                  if(x==1)
+                  {
+                     for(var i=0;i<a.length;i++)
+                     optionlist[i].text=a[i];
+      
+                  }
+                  if (x==2)
+                  {
+                     for(var i=0;i<b.length;i++)
+                     optionlist[i].text=b[i];
+                  }
+                }
+            }
+        </script>
+  
+    <form name ="forms1" action="" method="" >
+    <select name="optionlist">
+    <option value="1"></option>
+    <option value="2"></option>
+    <option value="3"></option>
+    <option value="4"></option>
+    </select>
+    <input  type="radio" name="objects" value="1" onclick="updatelist(this.value)">fruits
+    
+        
+    <input  type="radio" name="objects" value="2" onclick="updatelist(this.value)">vegatables
+    </form>
+    </div>
+    <div>
+        
+        <h1>ReadOnly Elements</h1><script>
+        function readonly()
+        {
+         document.forms.frm1.t1.readOnly=true;
+        }
+        function enter()
+        {
+         document.forms.frm1.t1.readOnly=false;
+        }
+        </script>
+        <form name="frm1">
+        ENTER YOUR NAME:
+        <input type="text" name="t1">
+        <input type="button" name="b1" value="Read Only" onclick="readonly()">
+        <input type="button" name="b2" value="Write" onclick="enter()">
+        </form></div>
+        <div>
+            <p>
+                <h3>Email Id@msbte.com</h3>
+                First Name: <input type="text" name="fn" value="" ><br>
+                 Last Name: <input type="text" name="ln" value="" onblur="email()" ><br>
+                     Email: <input type="text" name="Email" value="" ><br>
+                     <input type="submit" name="submit" type="submit">
+                     <input type="reset" name="reset" type="reset">
+                     </p> 
+                     <script>
+                        function email()
+    	{
+    		document.forms.form1.Email.value=document.forms.form1.fn.value
+    	+document.forms.form1.ln.value+"."+"@msbte.com";
+    	}
+    	function sub()
+    	{
+    	document.getElementById("l1").style.color="red",disabled=true;	
+    	document.getElementById("fname").style.background="red",disabled=true;	
+      document.getElementById("l2").style.color="red",disabled=true;	
+    	document.getElementById("lname").style.background="red",disabled=true;	
+      document.getElementById("l3").style.color="red",disabled=true;	
+    	document.getElementById("email").style.background="red",disabled=true;	
+
+    	}
+                     </script>
+        </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f6" action="" method="">
+	Enter first name: <input type="text" id="b1" name="fname"><br><br>
+	Enter last name: <input type="text" id="b2" name="lname" onblur="a()"><br><br>
+	Email:<input type="email" name="" id="b3">
+	<button onclick="javascript:document.forms.f6.submit()">Submit</button><br><br>
+	<input type="reset" onclick="r()" name="">
+
+
+</form>
+<script type="text/javascript">
+	function s() { 
+		document.getElementById('b2').disabled=true;
+	document.getElementById('b1').disabled=true;
+	document.getElementById('b3').disabled=true;
+	}
+	function a(){
+
+		
+	var y=	document.getElementById('b1').value;
+	var z=	document.getElementById('b2').value;
+			document.getElementById('b1').style.background="red";
+			document.getElementById('b2').style.background="red";
+			document.getElementById('b3').style.background="red";
+
+    var x="@msbte.com";
+    var w=".";
+    	document.getElementById('b3').value=y+w+z+x;
+	}
+</script>
+</body>
+</html>
